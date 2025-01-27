@@ -11,31 +11,30 @@
   </style>
 </head>
 <body>
+  <img class="img-fluid" id="banner" src="https://eab39003-7f36-44f3-b408-d9933d20109b-00-15bs09pg092ee.pike.replit.dev/static/banner.jpg">
+  {% include 'nav.html' %}
   <div class="container">
     <h1 class="text-center mt-2 mb-4">{{company_name}} Career</h1>
-    <img class="img-fluid" id="banner" src="https://eab39003-7f36-44f3-b408-d9933d20109b-00-15bs09pg092ee.pike.replit.dev/static/banner.jpg">
-    <h2 class="text-center mt-3 mb-3">My Career</h2>
+    
+    <div class="row">
+      <div class="col-md-6">
     <p class="lead">
       Lorem ipsum odor amet, consectetuer adipiscing elit. Fringilla eget ultrices nascetur consequat hac torquent tellus. Praesent litora fames diam magnis curae sociosqu efficitur. Posuere id varius metus vulputate phasellus ornare lacus ut. Dis sapien placerat auctor posuere efficitur nostra a tristique. Leo ultricies metus mus dolor sollicitudin fermentum pharetra montes accumsan. Orci duis ullamcorper mus etiam per hendrerit per luctus proin. Vulputate gravida aenean praesent, parturient per quis blandit efficitur.
-  
-      Eleifend integer scelerisque efficitur neque nam donec ultrices. Auctor ullamcorper tempor erat eget convallis. Nunc a iaculis nostra; penatibus lorem curae. Penatibus facilisi class sed primis dolor adipiscing enim tellus. Mattis habitasse accumsan vivamus donec fringilla vehicula vehicula nullam. Faucibus suspendisse neque luctus eu maximus tempor purus condimentum tempus. Pharetra lacinia class tempus eget, non mauris. Nam praesent lobortis lectus himenaeos laoreet nisl.
-  
-      Diam fusce neque nascetur suscipit convallis ornare fames. Sodales netus dui suscipit facilisis finibus nisl varius leo tincidunt. Arcu viverra felis duis viverra quisque quisque nulla. Iaculis iaculis varius cubilia lacus curabitur. Cubilia nibh hac elit est elit proin felis. Sodales senectus finibus adipiscing vitae in et odio amet. Ex ex efficitur commodo congue nisi purus nibh.
-  
-      Iaculis per pretium himenaeos lectus penatibus finibus aliquet. Fringilla sodales efficitur lobortis vivamus fermentum vehicula. Nostra tortor condimentum mollis efficitur nulla donec. Nascetur posuere finibus erat faucibus amet justo mattis orci. Pharetra ante pharetra mi; donec nam scelerisque. Posuere ultrices commodo purus vivamus vel turpis facilisis magnis interdum. Ultrices consequat dui sagittis arcu nascetur hendrerit.
-  
-      Rhoncus cursus cras parturient ex habitant. Dictum ridiculus ac laoreet integer consectetur velit in ridiculus. Elementum a hendrerit etiam rutrum; curae pharetra. Malesuada convallis curabitur litora dolor; purus ligula vivamus. Non montes class sodales morbi etiam ad. Curae dictum in adipiscing curabitur rhoncus; pulvinar pellentesque dolor. Lacinia dapibus porta sapien urna leo porttitor curabitur lectus. Lorem libero vivamus accumsan penatibus; libero consectetur imperdiet. Habitant per feugiat senectus pellentesque nisl praesent habitant cursus. Tortor fermentum molestie leo justo amet sem phasellus velit.
     </p>
+      </div>
+    <div class="d-none d-md-block col-6" style="margin-bottom:16px">
+      <img src="/static/sky.jpg" style="height:500px; border-radius:4px;">
+    </div>
     <h2 class="text-center mt-2 mb-4">Job Openings</h2>
-    <div style="margin-bottom:16px;">
+    <div>
       {% for job in jobs %}
           {% include 'jobitem.html' %}
       {% endfor %}
       </div>
     <div class="text-center">
-    <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">Copyright 2025, Atreyee</p>
+    <a href="mailto:theriveratreyee@gmail.com?subject=Question%20about%20Job%20Openings&body=My%20name%3A%20%3CYour%20name%20here%3E%0D%0AMy%20question%20%3A%20%3CEnter%20Question%20here%3E" class="btn btn-primary btn-lg">Contact Us</a>
     </div>
   </div>
+  {% include 'footer.html' %}
 </body>
 </html>
