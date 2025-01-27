@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, jsonify
+from database import load_jobs_from_db
+from sqlalchemy import text
 
 app = Flask(__name__)
 
@@ -31,15 +33,19 @@ JOBS =[
 ]
 
 
+
+
 @app.route("/")
 def hello():
+    jobs= load_jobs_from_db()
     return render_template('home.html',
-                           jobs=JOBS,
+                           jobs=jobs,
                           company_name='Jovian')
 
 @app.route("/api/jobs")
 def list_jobs():
-    return jsonify(JOBS)
+    jobs=load_jobs_from_db()
+    return jsonify(jobs)
 
 
 if __name__=="__main__":
